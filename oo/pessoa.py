@@ -1,4 +1,5 @@
 class Pessoa:
+    olhos = 2
     def __init__(self, *filhos, nome=None, idade=34):
         self.idade = idade
         self.nome = nome
@@ -8,6 +9,7 @@ class Pessoa:
 
 Rafael = Pessoa(nome= 'Rafael')
 Francisco = Pessoa(Rafael, nome= 'Francisco', idade=64)
+Rafael.olhos = 3
 print(Pessoa.comprimentar(Francisco))
 print(Francisco.comprimentar())
 print(Francisco.nome)
@@ -17,3 +19,6 @@ for filho in Francisco.filhos:
 Francisco.sobrenome = 'Rissatto'
 print(Francisco.__dict__)
 print(Rafael.__dict__)
+print(Rafael.olhos)
+print(Francisco.olhos)
+print(id(Pessoa.olhos), id(Rafael.olhos), id(Francisco.olhos))
