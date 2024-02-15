@@ -14,3 +14,6 @@ print(Francisco.nome)
 print(Francisco.idade )
 for filho in Francisco.filhos:
     print(filho.nome)
+Francisco.sobrenome = 'Rissatto'
+print(Francisco.__dict__)
+print(Rafael.__dict__)
